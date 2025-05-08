@@ -15,5 +15,5 @@ class TestDisplayScoreboard:
     def test_scoreboard_on_index_page(self, client):
         response = client.get('/')
         assert response.status_code == 200
-        expected_answer = '<a href=/scoreboard">Scoreboard</a>'
+        expected_answer = '<a href="/scoreboard">Scoreboard</a>'
         assert expected_answer in response.get_data(as_text=True)
