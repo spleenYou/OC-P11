@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GUDLFT Scoreboard</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            
+            td, th {
+                border: 1px solid black;
+                text-align: center;
+                padding: 8px;
+            }
+            
+            tbody tr:nth-child(odd) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Scoreboard</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Club</th>
+                <th>Points</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for club in clubs %}
+            <tr>
+                <td>{{ club['name'] }}</td>
+                <td>{{ club['points'] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
