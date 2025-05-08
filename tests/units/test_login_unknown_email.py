@@ -1,5 +1,5 @@
 class TestLoginUnknownMail:
-    def test_login_ok(self, client, clubs):
+    def test_login(self, client, clubs):
         response = client.post('/showSummary', data={'email': clubs[0]['email']})
         assert response.status_code == 200
         expected_response = "john@simplylift.co"
