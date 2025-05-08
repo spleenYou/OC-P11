@@ -10,3 +10,8 @@ def client():
 @pytest.fixture
 def clubs():
     return server.clubs
+
+
+@pytest.fixture
+def competitions():
+    return server.competitions
