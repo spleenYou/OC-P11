@@ -74,6 +74,14 @@ def scoreboard():
     return render_template('scoreboard.html', clubs=clubs)
 
 
+@app.route('/resetData')
+def resetdata():
+    global competitions, clubs
+    competitions = loadCompetitions()
+    clubs = loadClubs()
+    return render_template('index.html')
+
+
 @app.route('/logout')
 def logout():
     return redirect(url_for('index'))
